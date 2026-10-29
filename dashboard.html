@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market IQ Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box" style="width: min(850px, 85vw);">
+        <h1>Market <span>IQ</span></h1>
+
+        <h2 id="welcomeMessage" style="font-size: 30px;">
+            Welcome! 👋
+        </h2>
+
+        <p>Welcome to Market IQ — Your Smart Business Dashboard</p>
+        <p>Make smarter decisions. Grow your business.</p>
+
+        <hr>
+
+        <h2>📊 Business Overview</h2>
+
+        <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
+            <div style="background:#334155; padding:20px; border-radius:12px; flex:1; min-width:130px;">
+                <p>💰 Total Sales</p>
+                <h2>₹45,800</h2>
+            </div>
+
+            <div style="background:#334155; padding:20px; border-radius:12px; flex:1; min-width:130px;">
+                <p>👥 Customers</p>
+                <h2>1,240</h2>
+            </div>
+
+            <div style="background:#334155; padding:20px; border-radius:12px; flex:1; min-width:130px;">
+                <p>📦 Products</p>
+                <h2>350</h2>
+            </div>
+        </div>
+
+        <h2>🚀 Market IQ Features</h2>
+        <p>📈 Sales Growth Analysis</p>
+        <p>📦 Stock & Demand Analysis</p>
+        <p>⚠️ Product Expiry Alerts</p>
+        <p>🔥 Trending Products</p>
+
+        <button onclick="sessionStorage.removeItem('marketIQUser'); location.href='login.html'">
+            Logout
+        </button>
+
+        <p style="color:#94a3b8; margin-top:25px;">
+            © 2026 Market IQ | Smart Shop Management
+        </p>
+    </div>
+    <script>
+const user = JSON.parse(sessionStorage.getItem("marketIQUser"));
+
+if (user) {
+    document.getElementById("welcomeMessage").textContent =
+        `Welcome, ${user.name}! 👋`;
+}
+</script>
+</body>
+</html>
