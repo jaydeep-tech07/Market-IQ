@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Market IQ</title>
+  <script>
+    location.replace(
+      sessionStorage.getItem("marketIQUser")
+        ? "dashboard.html"
+        : "login.html"
+    );
+  </script>
+</head>
+<body>Market IQ loading...</body>
+</html>
